@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>facebook</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-522.000000, -1150.000000)" fill="#202124">
+            <g id="social" transform="translate(522.000000, 1150.000000)">
+                <path d="M28.34505,0 L1.654995,0 C0.741255,0 0,0.741255 0,1.654995 L0,28.34505 C0,29.26005 0.741255,30 1.654995,30 L16.02255,30 L16.02255,18.3825 L12.1113,18.3825 L12.1113,13.85625 L16.02255,13.85625 L16.02255,10.512495 C16.02255,6.638745 18.39,4.531245 21.8463,4.531245 C23.50245,4.531245 24.92625,4.652505 25.3413,4.707495 L25.3413,8.757495 L22.93995,8.757495 C21.06495,8.757495 20.7,9.658755 20.7,10.971255 L20.7,13.86 L25.18005,13.86 L24.5988,18.3975 L20.7,18.3975 L20.7,30 L28.3437,30 C29.26005,30 30,29.26005 30,28.34505 L30,1.654995 C30,0.741255 29.26005,0 28.34505,0 Z" id="facebook"></path>
+            </g>
+        </g>
+    </g>
+</svg>
