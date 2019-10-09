@@ -1,0 +1,299 @@
+/**
+ * Общие стили
+ **/
+html {
+  height: 100%;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: @font;
+  background-color: @bg;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 10vh;
+
+  .screen-ipad-m({
+    margin-top: 56px;
+  });
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  margin-bottom: 6vh;
+
+  .screen-ipad-m({
+    margin-bottom: 2vh;
+  });
+}
+
+.logo {
+  text-decoration: none;
+  display: block;
+  zoom: 1.06;
+
+  &__icon {
+    .svg-svg--MEWlogo;
+    .svg-svg--MEWlogo-dims;
+
+    .screen-ipad-m({
+      zoom: 0.75;
+    })
+  }
+
+  &__title {
+    color: rgb(32, 33, 36);
+    font-size: 80px;
+    line-height: 90%;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    margin-top: 3vh;
+    margin-bottom: 0;
+    -moz-font-feature-settings: 'ss01', 'ss02';
+    -webkit-font-feature-settings: 'ss01', 'ss02';
+    font-feature-settings: 'ss01' on, 'ss02' on;
+
+    .screen-ipad-m({
+      font-size: 56px;
+      margin-top: 3vh;
+    })
+  }
+
+  &__subtitle {
+    color: #5f6368;
+    font-size: 20px;
+    line-height: 2em;
+    font-style: italic;
+    font-weight: 500;
+    margin: 0;
+
+    .screen-ipad-m({
+      font-size: 15px;
+      line-height: 30px;
+    })
+  }
+}
+
+.beta {
+  &__description {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    letter-spacing: 0.26px;
+    color: #202124;
+    font-size: 38px;
+    line-height: 150%;
+    font-weight: 700;
+    -moz-font-feature-settings: 'ss01', 'ss02';
+    -webkit-font-feature-settings: 'ss01', 'ss02';
+    font-feature-settings: 'ss01' on, 'ss02' on;
+
+    .screen-ipad-m({
+      font-size: 26px;
+      line-height: 150%;
+      margin-top: 32px;
+      margin-bottom: 32px;
+
+    })
+  }
+
+  &__button {
+    margin-top: 20px;
+    .svg-svg--betaButton;
+    .svg-svg--betaButton-dims;
+    display: block;
+    zoom: .87;
+
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .screen-ipad-m({
+      margin-top: 52px;
+    });
+  }
+
+  &__coming-soon {
+    color: rgba(95, 99, 104, 0.6);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.09px;
+    line-height: 21px;
+    margin-left: 23px;
+    margin-top: 10px;
+  }
+}
+
+.mew-phone {
+  position: absolute;
+  left: 100%;
+  top: 70px;
+  right: 0;
+  bottom: auto;
+  z-index: 0;
+  height: auto;
+  width: 100%;
+  text-align: right;
+
+  .screen-ipad-m({
+    position: static;
+    text-align: left;
+  });
+
+  &__img {
+    width: calc(~'100% - 10px');
+
+    .screen-ipad-m({
+      width: 100%;
+    });
+  }
+}
+
+.footer {
+  padding-top: 15vw;
+  padding-bottom: 10vh;
+  
+  .screen-ipad-m({
+    padding-top: 0vh;
+    padding-bottom: 56px;
+  });
+
+  &__links {
+    li {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    color: rgb(32, 33, 36);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.13px;
+    line-height: 28px;
+    text-decoration: none;
+    border-style: none none solid;
+    border-width: 1px;
+    border-color: #ffffff;
+
+    &:hover {
+      border-color: #07a6b3 #07a6b3 rgba(7, 166, 179, 0.4);
+      color: #07a6b3;
+    }
+
+    .screen-ipad-m({
+      font-size: 17px;
+      line-height: 42px;
+    });
+  }
+
+  &__soc-links {
+    padding-left: 20px;
+    margin-top: -38px;
+
+    .screen-ipad-m({
+      padding-left: 0;
+      margin-top: 20px;
+    });
+
+    &-item {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 18px;
+
+      -webkit-transition: opacity .3s ease-in-out;
+      -moz-transition: opacity .3s ease-in-out;
+      -ms-transition: opacity .3s ease-in-out;
+      -o-transition: opacity .3s ease-in-out;
+      transition: opacity .3s ease-in-out;
+      opacity: 1;
+      background-size: cover;
+
+      .screen-ipad-m({
+        zoom: 0.75;
+      });
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &--facebook {
+        .svg-svg--facebook;
+        .svg-svg--facebook-dims;
+      }
+
+      &--twitter {
+        .svg-svg--twitter;
+        .svg-svg--twitter-dims;
+      }
+
+      &--instagram {
+        .svg-svg--instagram;
+        .svg-svg--instagram-dims;
+      }
+
+      &--linkedin {
+        .svg-svg--linkedin;
+        .svg-svg--linkedin-dims;
+      }
+
+      &--github {
+        .svg-svg--github;
+        .svg-svg--github-dims;
+      }
+
+      &--reddit {
+        .svg-svg--reddit;
+        .svg-svg--reddit-dims;
+      }
+
+      &--medium {
+        .svg-svg--medium;
+        .svg-svg--medium-dims;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 15px;
+    color: rgb(95, 99, 104);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 20px;
+    padding-left: 20px;
+
+    .screen-ipad-m({
+      margin-top: 30px;
+      padding-left: 0;
+    });
+  }
+}
