@@ -11,23 +11,20 @@ html {
   margin: 0;
   width: 100%;
   min-height: 100%;
-  font-family: @font;
   background-color: @bg;
   position: relative;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
+  font-family: @font;
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
+  font-variation-ligatures: normal;
+  font-feature-settings:'calt', 'liga'; 
+  min-width: 320px;
 }
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin-top: 10vh;
-
-  .screen-ipad-m({
-    margin-top: 56px;
-  });
 }
 
 .wrapper {
@@ -35,219 +32,300 @@ body {
   position: relative;
   z-index: 1;
   margin: 0 auto;
-  margin-bottom: 6vh;
+  min-width: 320px;
 
-  .screen-ipad-m({
-    margin-bottom: 2vh;
+  .screen-tablet({
+
   });
+
+  .container {
+    width: 940px;
+
+    .screen-tablet({
+      width: calc(~"100% - 148px");
+      margin: 0 74px;
+    });
+
+    .screen-mobile({
+      width: calc(~"100% - 42px");
+      margin: 0 21px;
+    });
+
+    .col-5 {
+      .screen-tablet({
+        flex: 0 0 50%;
+        max-width: 50%;
+      });
+
+      .screen-mobile({
+        flex: 0 0 100%;
+        max-width: 100%;
+      });
+    }
+
+    .col-10 {
+      .screen-tablet({
+        flex: 0 0 100%;
+        max-width: 100%;
+      });
+
+      .screen-mobile({
+        flex: 0 0 100%;
+        max-width: 100%;
+      });
+    }
+
+    &.full {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+
+      .col-10 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
 }
 
-.logo {
-  text-decoration: none;
-  display: block;
-  zoom: 1.06;
+.header {
+  height: 120px;
+  position: relative;
 
-  &__icon {
+  &__logo {
     .svg-svg--MEWlogo;
     .svg-svg--MEWlogo-dims;
+    position: absolute;
+    top: 29px;
+    left: 0;
 
-    .screen-ipad-m({
-      zoom: 0.75;
-    })
+    .screen-mobile({
+      top: 25px;
+      left: -6px;
+    });
   }
 
-  &__title {
-    color: rgb(32, 33, 36);
-    font-size: 80px;
-    line-height: 90%;
-    font-weight: 900;
-    letter-spacing: 0.3px;
-    margin-top: 3vh;
-    margin-bottom: 0;
-    -moz-font-feature-settings: 'ss01', 'ss02';
-    -webkit-font-feature-settings: 'ss01', 'ss02';
-    font-feature-settings: 'ss01', 'ss02';
+  &__menu {
+    position: absolute;
+    top: 48px;
+    left: 80px;
 
-    .screen-ipad-m({
-      font-size: 56px;
-      margin-top: 3vh;
-    })
-  }
+    .screen-mobile({
+      display: none
+    });
 
-  &__subtitle {
-    color: #5f6368;
-    font-size: 20px;
-    line-height: 2em;
-    font-style: italic;
-    font-weight: 500;
-    margin: 0;
+    &-link {
+      font-size: 18px;
+      line-height: 23px;
+      color: @textColor;
+      margin-right: 20px;
+      text-decoration: none;
 
-    .screen-ipad-m({
-      font-size: 15px;
-      line-height: 30px;
-    })
-  }
-}
+      .screen-mobile({
+        display: none
+      });
 
-.beta {
-  &__description {
-    margin-top: 6vh;
-    margin-bottom: 6vh;
-    letter-spacing: 0.26px;
-    color: #202124;
-    font-size: 38px;
-    line-height: 150%;
-    font-weight: 700;
-    -moz-font-feature-settings: 'ss01', 'ss02';
-    -webkit-font-feature-settings: 'ss01', 'ss02';
-    font-feature-settings: 'ss01', 'ss02';
+      &.active {
+        border-bottom: 2px solid @textColor;
+      }
 
-    .screen-ipad-m({
-      font-size: 26px;
-      line-height: 150%;
-      margin-top: 32px;
-      margin-bottom: 32px;
+      &:hover {
+        border-bottom: 2px solid @textColor;
+      }
 
-    })
-  }
+      &.right {
+        color: #07a6b3;
+        border: 0 none;
+        position: absolute;
+        right: 0;
+        top: 48px;
+        margin: 0;
 
-  &__button {
-    margin-top: 20px;
-    .svg-svg--betaButton;
-    .svg-svg--betaButton-dims;
-    display: block;
-    zoom: .87;
-
-    -webkit-transition: opacity .3s ease-in-out;
-    -moz-transition: opacity .3s ease-in-out;
-    -ms-transition: opacity .3s ease-in-out;
-    -o-transition: opacity .3s ease-in-out;
-    transition: opacity .3s ease-in-out;
-    opacity: 1;
-
-    &:hover {
-      opacity: 0.7;
+        &:hover {
+          opacity: 0.8;
+        }
+      } 
     }
-
-    .screen-ipad-m({
-      margin-top: 52px;
-    });
-  }
-
-  &__button-android {
-    margin-top: 24px;
-    .svg-svg--androidBetaButton;
-    .svg-svg--androidBetaButton-dims;
-    display: block;
-    zoom: .87;
-
-    -webkit-transition: opacity .3s ease-in-out;
-    -moz-transition: opacity .3s ease-in-out;
-    -ms-transition: opacity .3s ease-in-out;
-    -o-transition: opacity .3s ease-in-out;
-    transition: opacity .3s ease-in-out;
-    opacity: 1;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    .screen-ipad-m({
-      margin-top: 16px;
-      zoom: .87;
-    });
-  }
-
-  &__coming-soon {
-    color: rgba(95, 99, 104, 0.6);
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.09px;
-    line-height: 21px;
-    margin-left: 23px;
-    margin-top: 10px;
-  }
-}
-
-.mew-phone {
-  position: absolute;
-  left: 100%;
-  top: 70px;
-  right: 0;
-  bottom: auto;
-  z-index: 0;
-  height: auto;
-  width: 100%;
-  text-align: right;
-
-  .screen-ipad-m({
-    position: static;
-    text-align: left;
-  });
-
-  &__img {
-    width: calc(~'100% - 10px');
-
-    .screen-ipad-m({
-      width: 100%;
-    });
   }
 }
 
 .footer {
-  padding-top: 15vw;
-  padding-bottom: 10vh;
+  height: 1200px;
+  background-color: @fBg;
+  padding-top: 89px;
 
-  .screen-ipad-m({
-    padding-top: 0vh;
-    padding-bottom: 56px;
+  .screen-mobile({
+    padding-top: 58px;
   });
 
-  &__links {
-    li {
-      margin-bottom: 12px;
+  .links {
+    .screen-mobile({
+      margin-top: 130px;
+    });  
+  }
 
-      &:last-child {
-        margin-bottom: 0;
+  .container {
+    width: 940px;
+
+    .screen-tablet({
+      width: calc(~"100% - 148px");
+      margin: 0 74px;
+    });
+
+    .screen-mobile({
+      width: calc(~"100% - 42px");
+      margin: 0 21px;
+    });
+
+    .col-5 {
+      .screen-tablet({
+        flex: 0 0 50%;
+        max-width: 50%;
+      });
+
+      .screen-mobile({
+        flex: 0 0 100%;
+        max-width: 100%;
+      });
+    }
+
+    .col-10 {
+      .screen-tablet({
+        flex: 0 0 100%;
+        max-width: 100%;
+      });
+    }
+  }
+
+  &__logo {
+    .svg-svg--MEWlogoFooter;
+    .svg-svg--MEWlogoFooter-dims;
+    display: block;
+
+    .screen-mobile({
+      transform: scale(0.66);
+      margin-left: -22px;
+    });
+  }
+
+  &__get-app {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 900;
+    font-variation-settings: 'wght' 900;
+    letter-spacing: 0px;
+    line-height: 70px;
+    margin: 30px 0 0 2px;
+    position: relative;
+
+    .screen-mobile({
+      font-size: 40px;
+      line-height: 50px;
+      margin: -11px 0 0 0px;
+    });
+
+  }
+
+  &__download {
+    text-align: left;
+    padding-top: 66px;
+
+    .screen-mobile({
+      position: static;
+      text-align: left;
+      padding-top: 41px;
+    });
+
+    &-link {
+      display: inline-block;
+      margin-bottom: 15px;
+      margin-right: 30px;
+
+      .screen-tablet({
+        transform: scale(.788);
+        margin-left: -27px;
+        margin-right: 0;
+        margin-bottom: -7px;
+      });
+
+      &.app-store {
+          .svg-svg--appstore_white;
+          .svg-svg--appstore_white-dims;
+      }
+
+      &.galaxy-store {
+          .svg-svg--galaxy_white;
+          .svg-svg--galaxy_white-dims;
+
+          .screen-tablet({
+            margin-left: -32px;
+          });
+      }
+
+      &.google-play {
+          .svg-svg--google_white;
+          .svg-svg--google_white-dims;
+
+          .screen-tablet({
+            margin-left: -30px;
+          });
       }
     }
   }
 
-  &__link {
-    color: rgb(32, 33, 36);
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.13px;
-    line-height: 28px;
-    text-decoration: none;
-    border-style: none none solid;
-    border-width: 1px;
-    border-color: #ffffff;
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(32, 33, 36);
+    margin-top: 74px;
+    margin-bottom: 84px;
 
+    .screen-mobile({
+      margin-bottom: 73px;
+      margin-top: 71px;
+    });
+  }
+
+  &__link {
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0.12px;
+    line-height: 28px;
+    margin-bottom: 18px;
+    text-decoration: none;
+    display: block;
+    margin-left: 2px;
+
+    &.right {
+      margin-left: 10px;;
+    }
+    
     &:hover {
-      border-color: #07a6b3 #07a6b3 rgba(7, 166, 179, 0.4);
-      color: #07a6b3;
+      text-decoration: underline;
     }
 
-    .screen-ipad-m({
-      font-size: 17px;
-      line-height: 42px;
+    .screen-mobile({
+      margin-left: 0 !important;
     });
   }
 
   &__soc-links {
-    padding-left: 20px;
-    margin-top: -38px;
+    padding-left: 10px;
+    margin-top: -3px;
+    margin-bottom: 26px;
 
-    .screen-ipad-m({
+    .screen-mobile({
+      position: absolute;
+      left: -6px;
+      top: -309px;
       padding-left: 0;
-      margin-top: 20px;
+      width: calc(~"100% + 10px");
     });
 
     &-item {
       display: inline-block;
       vertical-align: middle;
-      margin-right: 18px;
+      margin-right: 13px;
 
       -webkit-transition: opacity .3s ease-in-out;
       -moz-transition: opacity .3s ease-in-out;
@@ -257,8 +335,9 @@ body {
       opacity: 1;
       background-size: cover;
 
-      .screen-ipad-m({
-        zoom: 0.75;
+      .screen-mobile({
+        margin-right: 11px;
+        margin-bottom: 11px;
       });
 
       &:hover {
@@ -300,6 +379,11 @@ body {
         .svg-svg--medium-dims;
       }
 
+      &--vk {
+        .svg-svg--vk;
+        .svg-svg--vk-dims;
+      }
+
       &:last-child {
         margin-right: 0;
       }
@@ -307,17 +391,14 @@ body {
   }
 
   &__copyright {
-    margin-top: 15px;
     color: rgb(95, 99, 104);
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0;
+    font-size: 12px;
+    letter-spacing: 0px;
     line-height: 20px;
-    padding-left: 20px;
+    margin: 26px 0 0 2px;
 
-    .screen-ipad-m({
-      margin-top: 30px;
-      padding-left: 0;
+    .screen-mobile({
+      margin: 36px 0 0 0;
     });
   }
 }

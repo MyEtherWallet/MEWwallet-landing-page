@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-764.000000, -7049.000000)">
+            <g id="Web" transform="translate(0.000000, 5707.000000)">
+                <g id="Features" transform="translate(122.000000, 1014.000000)">
+                    <g id="Group-5" transform="translate(0.000000, 140.000000)">
+                        <g id="Feature" transform="translate(560.000000, 186.000000)">
+                            <g id="icon_dapps" transform="translate(50.000000, 0.000000)">
+                                <g id="Group" transform="translate(32.000000, 2.000000)">
+                                    <path d="M40,16 L40,27 L40.0364134,27.0472078 C41.8981083,29.5460522 43,32.6443458 43,36 L43,53 L13,53 L13,36 C13,32.6222928 14.1164223,29.5053401 16.0003895,26.9980192 L16,16 L23.7251077,21.6179523 C25.0798764,21.215872 26.5147284,21 28,21 C29.485637,21 30.9208295,21.2159782 32.2758921,21.6182491 L40,16 Z" id="Combined-Shape" stroke="#000000" stroke-width="4" stroke-linejoin="round"></path>
+                                    <rect id="Rectangle" fill="#FFFFFF" x="15" y="48" width="26" height="6"></rect>
+                                    <path d="M29,36 C29,38.209139 30.790861,40 33,40" id="Path" stroke="#07A6B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M23,40 C25.209139,40 27,38.209139 27,36" id="Path" stroke="#07A6B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M20.5110816,2 C14.310478,2 11.7623122,2.49207351 9.12843209,3.90068803 C6.86956163,5.10874517 5.10874517,6.86956163 3.90068803,9.12843209 C2.49207351,11.7623122 2,14.310478 2,20.5110816 L2,35.4889184 C2,41.689522 2.49207351,44.2376878 3.90068803,46.8715679 C5.10874517,49.1304384 6.86956163,50.8912548 9.12843209,52.099312 C11.7623122,53.5079265 14.310478,54 20.5110816,54 L35.4889184,54 C41.689522,54 44.2376878,53.5079265 46.8715679,52.099312 C49.1304384,50.8912548 50.8912548,49.1304384 52.099312,46.8715679 C53.5079265,44.2376878 54,41.689522 54,35.4889184 L54,20.5110816 C54,14.310478 53.5079265,11.7623122 52.099312,9.12843209 C50.8912548,6.86956163 49.1304384,5.10874517 46.8715679,3.90068803 C44.2376878,2.49207351 41.689522,2 35.4889184,2 L20.5110816,2 Z" id="Rectangle" stroke="#000000" stroke-width="4"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

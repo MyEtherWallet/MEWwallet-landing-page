@@ -64,7 +64,7 @@ module.exports = function(grunt) {
           },
           shape: {
               spacing: {
-                  padding: 1
+                  padding: 5
               }
           }
         }

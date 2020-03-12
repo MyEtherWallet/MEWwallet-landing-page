@@ -3,77 +3,238 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>MEWwallet by MyEtherWallet</title>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css?v=3" media="screen">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?v=16" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <link href="pic/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link href="pic/touch-icon.png" rel="apple-touch-icon">
 </head>
 <body>
 <div class="wrapper">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <a href="/" class="logo">
-                    <div class="logo__icon"></div>
-                    <h1 class="logo__title">MEW<br />wallet</h1>
-                    <h4 class="logo__subtitle">by MyEtherWallet</h4>
-                </a>
+    <div class="container header">
+        <a href="/" class="header__logo"></a>
 
-                <div class="beta">
-                    <p class="beta__description">Finally, an official MEW&nbsp;wallet mobile&nbsp;app</p>
+        <div class="header__menu">
+            <a class="header__menu-link active" href="#">Home</a>
+            <!-- <a class="header__menu-link" href="#">Tutorial videos</a> -->
+            <a class="header__menu-link" href=" https://kb.myetherwallet.com">Support</a>
+        </div>
+
+        <a class="header__menu-link right" href="https://www.myetherwallet.com/">MyEtherWallet.com ></a>
+    </div>
+
+    <div class="start">
+        <div class="container">    
+            <div class="row justify-content-end">
+                <div class="col-5">
+                    <div class="start__wallet"></div>
+                    <p class="start__description">the official MyEtherWallet app</p>
+                    <h2 class="start__slogan">From zero to crypto.<br />Fast and safe.</h2>
+
+                    <div class="start__animate" id="js-animate"></div>
                 </div>
-
-                <div class="mew-phone">
-                    <img
-                     src="https://uploads-ssl.webflow.com/5d986be5e288d8dfc49af834/5d9b0b9fe7a0b353daf26e8c_wirePhone%402x.jpg"
-                     width="400"
-                     srcset="pic/phone-500.jpeg 500w, pic/phone-800.jpg 800w"
-                     sizes="(max-width: 479px) 80vw, 40vw"
-                     alt=""
-                     class="mew-phone__img"
-                    >
+                <div class="col-6">
+                    <div class="start__phone">
+                        <img srcset="pic/iphone_main@1x.png 1x, pic/iphone_main@2x.png 2x" alt="" />
+                    </div>
                 </div>
-
-                <a href="https://testflight.apple.com/join/PaBT4Ftd" class="beta__button"></a>
-                <a href="https://play.google.com/apps/testing/com.myetherwallet.mewwallet" class="beta__button-android"></a>
             </div>
-            <div class="col-lg-6"></div>
         </div>
     </div>
+
+    <div class="download">
+        <div class="container full">    
+            <div class="row justify-content-center align-items-center">
+                <div class="col-10">
+                    <h2 class="download__text">Buy, hold, and send Ether and tokens. Explore Ethereum.</h2>
+                    <div class="download__links">
+                        <a href="https://apps.apple.com/app/id1464614025" class="download__links-item app-store"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.myetherwallet.mewwallet" class="download__links-item google-play"></a>
+                        <a href="http://apps.samsung.com/appquery/appDetail.as?appId=com.myetherwallet.mewwallet" class="download__links-item galaxy-store"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video" id="js-video">
+        <!-- <h2 class="video__title">Simple. Light. Powerful.</h2> -->
+
+        <video data-poster="video/preload_frame.jpg" loop autoplay="true" id="player" muted="true">
+            <source data-src="video/mew_wallet.mp4" type='video/mp4'>
+            <source data-src="video/mew_wallet.webm" type='video/webm'>
+        </video>
+
+        <video data-poster="video/preload_frame_square.jpg" loop autoplay="false" id="player-m" muted="true">
+            <source data-src="video/mew_wallet_square.mp4" type='video/mp4'>
+            <source data-src="video/mew_wallet_square.webm" type='video/webm'>
+        </video>
+
+        <a href="javascript:void(0)" class="video__play js-play-video"></a>
+    </div>
+
+    <div class="buy-crypto">
+        <div class="container">    
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <div class="buy-crypto__image">
+                        <img data-srcset-base="pic/buy_ether_phone" data-srcset-ext=".jpg" data-srcset="@1x 1x, @2x 2x" alt="" />
+                    </div>
+                </div>
+                <div class="col-5">
+                    <h2 class="buy-crypto__title">Buy crypto with just a few taps</h2>
+                    <p class="buy-crypto__desc">Buy Ether right inside MEW wallet using your bank card or Apple Pay*</p>
+                    <p class="buy-crypto__note">*Apple Pay is available in the US only</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="own-funds">
+        <div class="container">    
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="own-funds__image" id="js-animate-own-funds"></div>
+                    <h2 class="own-funds__title">Own your funds:<br />you are in full control</h2>
+                    <p class="own-funds__desc">MEW wallet is a true, non-custodial Ethereum wallet. This means that you and only you have access to your funds.</p>
+                    <a href="https://www.mewtopia.com/the-essential-wallet-guide-part-3/" target="_blank" class="own-funds__link">What is a non-custodial wallet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="supporting">
+        <div class="container">    
+            <div class="row justify-content-start">
+                <div class="col-6">
+                    <div class="supporting__image">
+                        <img srcset="pic/tokens@1x.png 1x, pic/tokens@2x.png 2x" alt="" />
+                    </div>
+                </div>
+                <div class="col-5">
+                    <h2 class="supporting__title">Supporting all ERC-20 tokens </h2>
+                    <p class="supporting__desc">If it is on Ethereum blockchain MEW wallet will support it. No need to add custom tokens manually.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stay-safe">
+        <div class="container">    
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="stay-safe__image" id="js-animate-stay-safe"></div>
+                    <h2 class="stay-safe__title">Stay safe, MEW’s got<br />your back</h2>
+
+                    <ul class="stay-safe__desc">
+                        <li>We will teach you how to stay safe and secure in the world of crypto.</li>
+                        <li>We keep your account secure by using state of the art encryption and storing your keys locally in a secure vault on your device.</li>
+                        <li>We help you backup your wallet so you can recover your funds in case your device gets lost or stolen.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="samsung">
+        <div class="container">    
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <h2 class="samsung__title">Samsung Blockchain<br />Keystore support</h2>
+                    <p class="samsung__desc">Partnering with Samsung Blockchain, MEW allows users to keep their crypto safe by integrating with Samsung Blockchain Keystore, a secure enclave for safekeeping your private keys.
+                        Available on all Samsung devices supporting the Samsung Blockchain.</p>
+                    <div class="samsung__logo"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="samsung__image">
+            <img data-srcset-base="pic/samsung" data-srcset-ext=".jpg" data-srcset="@1x 1x, @2x 2x" alt="" />
+        </div>
+    </div>
+    
+    <div class="multiple-accounts">
+        <div class="container">    
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <h2 class="multiple-accounts__title">Multiple accounts</h2>
+                    <p class="multiple-accounts__desc">Use as many accounts as you like and fluidly switch between all of them, for privacy and convenience.</p>
+
+                    <div class="multiple-accounts__image">
+                        <img data-srcset-base="pic/galaxy_accounts" data-srcset-ext=".jpg" data-srcset="@1x 1x, @2x 2x" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="web">
+        <div class="container">    
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <h2 class="web__title">All the power<br />of MEW web</h2>
+                    <p class="web__desc">Connect to MyEtherWallet.com to use all of its extended features while safely keeping your keys on your mobile device.</p>
+                    <div class="web__image">
+                        <img data-src="pic/mewWeb.svg" alt="" />
+                    </div>
+                    <div class="web__features">
+                        <h3 class="web__features-title">Features available when<br />connected to MEW web</h3>
+                        <div class="web__features-item left">
+                            <div class="web__features-item-icon swap"></div><br />
+                            Swap & trade
+                        </div>
+                        <div class="web__features-item">
+                            <div class="web__features-item-icon sign"></div><br />
+                            Sign messages
+                        </div>
+                        <div class="web__features-item right">
+                            <div class="web__features-item-icon deploy"></div><br />
+                            Deploy smart<br />contracts
+                        </div>
+                        <div class="web__features-item last left">
+                            <div class="web__features-item-icon convert"></div><br />
+                            Borrow crypto and<br />earn interest
+                        </div>
+                        <div class="web__features-item last">
+                            <div class="web__features-item-icon register"></div><br />
+                            Register ENS names
+                        </div>
+                        <div class="web__features-item last right">
+                            <div class="web__features-item-icon interact"></div><br />
+                            Interact with DApps
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <div class="footer">
-    <div class="container">
+    <div class="container">    
         <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <ul class="footer__links">
-                    <li>
-                        <a href="https://www.mewtopia.com" class="footer__link">MEWtopia</a>
-                    </li>
-                    <li>
-                        <a href="https://kb.myetherwallet.com/" class="footer__link">Knowledge Base</a>
-                    </li>
-                    <li>
-                        <a href="https://www.myetherwallet.com/" class="footer__link">MyEtherWallet.com</a>
-                    </li>
-                    <li>
-                        <a href="https://team.myetherwallet.com/" class="footer__link">Team</a>
-                    </li>
-                    <li>
-                        <a href="mailto:support@myetherwallet.com?subject=MEW%20wallet%20landing%20page%20private%20beta" class="footer__link">Support</a>
-                    </li>
-                    <li>
-                        <a href="https://www.myetherwallet.com/privacy-policy" class="footer__link">Privacy policy</a>
-                    </li>
-                </ul>
+            <div class="col-10">
+                <a href="/" class="footer__logo"></a>
+                <h2 class="footer__get-app">Get the<br />MEW wallet</h2>
+
+                <div class="footer__download">
+                    <a href="https://apps.apple.com/app/id1464614025" class="footer__download-link app-store"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.myetherwallet.mewwallet" class="footer__download-link google-play"></a>
+                    <a href="http://apps.samsung.com/appquery/appDetail.as?appId=com.myetherwallet.mewwallet" class="footer__download-link galaxy-store"></a>
+                </div>
             </div>
-            <div class="col-lg-6"></div>
         </div>
     </div>
-    <div class="container">
+    <div class="footer__line"></div>
+    <div class="container">    
         <div class="row justify-content-center">
-            <div class="col-lg-6"></div>
-            <div class="col-lg-6">
+            <div class="col-5">
+                <a href="https://kb.myetherwallet.com/" class="footer__link links">Knowledge Base</a>
+                <a href="https://www.mewtopia.com/" class="footer__link">MEWtopia</a>
+                <a href="https://www.myetherwallet.com/" class="footer__link">MyEtherWallet.com</a>
+                <a href="https://team.myetherwallet.com/" class="footer__link">Team</a>
+            </div>
+            <div class="col-5">
                 <div class="footer__soc-links">
                     <a href="https://www.facebook.com/MyEtherWallet/" target="_blank" class="footer__soc-links-item footer__soc-links-item--facebook"></a>
                     <a href="https://twitter.com/myetherwallet" target="_blank" class="footer__soc-links-item footer__soc-links-item--twitter"></a>
@@ -82,14 +243,22 @@
                     <a href="https://github.com/MyEtherWallet" target="_blank" class="footer__soc-links-item footer__soc-links-item--github"></a>
                     <a href="https://www.reddit.com/r/MyEtherWallet/" target="_blank" class="footer__soc-links-item footer__soc-links-item--reddit"></a>
                     <a href="https://medium.com/@myetherwallet" target="_blank" class="footer__soc-links-item footer__soc-links-item--medium"></a>
+                    <a href="https://vk.com/public190491855" target="_blank" class="footer__soc-links-item footer__soc-links-item--vk"></a>
                 </div>
-                <div class="footer__copyright">© 2020 MyEtherWallet, Inc</div>
+                
+                <a href="mailto:support@myetherwallet.com?subject=MEW%20wallet%20landing%20page%20private%20beta" class="footer__link right">Support</a>
+                <a href="https://www.myetherwallet.com/privacy-policy" class="footer__link right">Privacy policy</a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <p class="footer__copyright">Copyright © 2020 MyEtherWallet Inc.</p>
             </div>
         </div>
     </div>
 </div>
 
-<script src="js/script.min.js?v=3"></script>
+<script src="js/script.min.js?v=16"></script>
 
 </body>
 </html>

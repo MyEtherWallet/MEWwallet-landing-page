@@ -2,10 +2,16 @@
  * Переменные
  **/
 
-@font: 'Raleway', sans-serif;
+@font: 'Manrope VF', Manrope, sans-serif;
 @borderRadius: 5px;
 
 @bg: #ffffff;
+@fBg: #000000;
+@blueBg: #004ee6;
+@grayBg: #f7f8f8;
+@lightGrayBg: #f2f4f7;
+
+@textColor: #202124;
 
 /****
  * Миксины, разное
@@ -101,20 +107,14 @@
    Screen size variables
    ========================================================================== */
 
-@screen-tablet:                    1024px;
+@screen-tablet:                    940px;
 @screen-desktop:                    1366px;
-@screen-ipad:                    868px;
-@screen-ipad-m:                    760px;
-@screen-tablet-m:                    880px;
+@screen-mobile:                    740px;
+@screen-mobile-l:                    740px;
 
 /* =============================================================================
    Media queries for different screen sizes
    ========================================================================== */
-
-// Tablet M
-.screen-tablet-m(@rules) {
-    @media (max-width: @screen-tablet-m) { @rules(); }
-}
 
 // Tablet
 .screen-tablet(@rules) {
@@ -126,12 +126,12 @@
     @media (max-width: @screen-desktop) { @rules(); }
 }
 
-// iPad
-.screen-ipad(@rules) {
-    @media (max-width: @screen-ipad) { @rules(); }
+// Mobile L
+.screen-mobile-l(@rules) {
+    @media (max-width: @screen-mobile-l) { @rules(); }
 }
 
-// iPad mini
-.screen-ipad-m(@rules) {
-    @media (max-width: @screen-ipad-m) { @rules(); }
+// Mobile
+.screen-mobile(@rules) {
+    @media (max-width: @screen-mobile) { @rules(); }
 }

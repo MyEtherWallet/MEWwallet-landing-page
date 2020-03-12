@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="60px" viewBox="0 0 62 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M21.5,44.5 C19.5,51.5 25.0015013,54.5115548 30,50.5 C35.799637,45.8454901 37.8696289,32.1333008 29,38 C22.1583585,42.5253137 34.890875,48.9132826 39.5,49.5 C39.9914654,49.562561 38.8476448,41.1598842 39.6293945,41.8203125 C40.9564286,42.9414013 42.3238433,46.4564628 44,46 C46.3597625,45.3573729 44.7645503,38.9920753 47,38 C49.3070551,36.9761468 50.7078631,43.0568287 53,42 C54.8093307,41.1657773 55,31 64,30" id="path-1"></path>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-765.000000, -6861.000000)">
+            <g id="Web" transform="translate(0.000000, 5707.000000)">
+                <g id="Features" transform="translate(122.000000, 1014.000000)">
+                    <g id="Group-5" transform="translate(0.000000, 140.000000)">
+                        <g id="Feature" transform="translate(560.000000, 0.000000)">
+                            <g id="icon_contracts" transform="translate(50.000000, 0.000000)">
+                                <g id="Group" transform="translate(27.000000, 0.000000)">
+                                    <rect id="Rectangle" stroke="#000000" stroke-width="4" x="18" y="2" width="40" height="56" rx="5"></rect>
+                                    <rect id="Rectangle" stroke="#000000" stroke-width="4" fill="#FFFFFF" x="8" y="2" width="40" height="56" rx="5"></rect>
+                                    <rect id="Rectangle" fill="#000000" x="14" y="8" width="28" height="4" rx="2"></rect>
+                                    <rect id="Rectangle" fill="#000000" x="14" y="16" width="25" height="4" rx="2"></rect>
+                                    <rect id="Rectangle" fill="#000000" x="14" y="24" width="26" height="4" rx="2"></rect>
+                                    <rect id="Rectangle" fill="#000000" x="14" y="32" width="15" height="4" rx="2"></rect>
+                                    <g id="Path-2" stroke-linecap="round" stroke-linejoin="round">
+                                        <use stroke="#FFFFFF" stroke-width="8" xlink:href="#path-1"></use>
+                                        <use stroke="#07A6B3" stroke-width="3" xlink:href="#path-1"></use>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
