@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>MEWwallet by MyEtherWallet</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.min.css?v=16" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <link href="/pic/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="/pic/touch-icon.png" rel="apple-touch-icon">
+</head>
+<body class="comic">
+<div class="comic-book">
+    <div class="container">
+        <div class="comic-book__menu js-menu">
+            <a href="/" class="comic-book__menu-link">< MEW wallet home</a>
+            <a href="/" class="comic-book__menu-logo"></a>
+
+            <div class="comic-book__menu-wallet"></div>
+            <p class="comic-book__menu-description">the official MyEtherWallet app</p>
+
+            <div class="comic-book__menu-download">
+                <p class="comic-book__menu-download-desc">Buy, hold, and send Ether and<br />tokens. Explore Ethereum.</p>
+                <a href="https://apps.apple.com/app/id1464614025" class="comic-book__menu-download-link app-store"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.myetherwallet.mewwallet" class="comic-book__menu-download-link google-play"></a>
+            </div>
+        </div>
+        <div class="comic-book__wrapper js-comic-wrapper">
+            <a href="javascript:void(0)" onClick="prevComic()" class="comic-book__wrapper-left js-prev"></a>
+
+            <div class="comic-book__wrapper-display clipped">
+                <img class="comic-book__wrapper-preloader" src="/images/loader.gif" />
+                <div class="comic-book__wrapper-comic js-comic" id="js-comic"></div>
+            </div>
+
+            <a href="javascript:void(0)" onClick="nextComic()" class="comic-book__wrapper-right js-next"></a>
+            <a href="javascript:void(0)" onClick="toggleMenu()" class="comic-book__wrapper-menu js-menu-toggle"></a>
+        </div>
+    </div>
+
+    <svg width="0" height="0">
+        <defs>
+          <clipPath id="clipped">
+            <rect id="clipped-rect" width="0" height="0" rx="20" ry="20"/>
+          </clipPath>
+        </defs>
+    </svg>
+</div>
+<script>// (function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()</script>
+
+<script src="/js/script.min.js?v=16"></script>
+
+</body>
+</html>

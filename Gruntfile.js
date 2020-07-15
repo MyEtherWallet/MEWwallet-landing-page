@@ -88,7 +88,7 @@ module.exports = function(grunt) {
         ],
         tasks: ['less:development', 'cssmin'],
         options: {
-          reload: true
+          reload: true,
         }
       },
       js: {
@@ -99,6 +99,12 @@ module.exports = function(grunt) {
         options: {
           reload: true
         }
+      }
+    },
+
+    serve: {
+      options: {
+          port: 9000
       }
     },
 
@@ -125,6 +131,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-svg-sprite');
   grunt.loadNpmTasks('grunt-spritesmith');
+  grunt.loadNpmTasks('grunt-serve');
 
   grunt.registerTask('default', ['less', 'cssmin', 'concat', 'uglify', 'watch']);
   grunt.registerTask('build', ['less', 'watch']);

@@ -19,16 +19,12 @@ $(window).load(function(){
     play();
   });
 
-  video.onended = function() {
-    // stop();
-  };
-
   bodymovin.loadAnimation({
     container: document.getElementById('js-animate'),
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'start.json'
+    path: '/start.json'
   });
 
   ownFundsAnimate = bodymovin.loadAnimation({
@@ -36,7 +32,7 @@ $(window).load(function(){
     renderer: 'svg',
     loop: true,
     autoplay: false,
-    path: 'own-funds.json'
+    path: '/own-funds.json'
   });
 
   staySafeAnimate = bodymovin.loadAnimation({
@@ -44,7 +40,7 @@ $(window).load(function(){
     renderer: 'svg',
     loop: true,
     autoplay: false,
-    path: 'stay-safe.json'
+    path: '/stay-safe.json'
   });
 });
 
