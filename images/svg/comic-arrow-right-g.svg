@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="28px" viewBox="0 0 36 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Elements/Arrows/Normal/nArrowRight</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Comics-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Desktop" transform="translate(-943.000000, -466.000000)" stroke="#07A6B3">
+            <g id="Group" transform="translate(917.000000, 436.000000)">
+                <g id="Elements/Arrows/Normal/nArrowRight" transform="translate(16.000000, 16.000000)">
+                    <g id="arrow.big.right">
+                        <path d="M42,28 L12,28 M44,28 L32,16 M44,28 L32,40" id="color" stroke-width="4"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

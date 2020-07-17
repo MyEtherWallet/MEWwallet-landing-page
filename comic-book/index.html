@@ -3,13 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>MEWwallet by MyEtherWallet</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.min.css?v=16" media="screen">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="/css/style.min.css?v=20" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/pic/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link href="/pic/touch-icon.png" rel="apple-touch-icon">
 </head>
-<body class="comic">
-<div class="comic-book">
+<body>
+<div class="comic-book js-comic-body">
     <div class="container">
         <div class="comic-book__menu js-menu">
             <a href="/" class="comic-book__menu-link">< MEW wallet home</a>
@@ -29,7 +29,9 @@
 
             <div class="comic-book__wrapper-display clipped">
                 <img class="comic-book__wrapper-preloader" src="/images/loader.gif" />
-                <div class="comic-book__wrapper-comic js-comic" id="js-comic"></div>
+                <div class="comic-book__wrapper-comic js-comic" id="js-comic">
+                    <img class="comic-book__wrapper-cover" src="/pic/what-is-eth-cover@2x.png" />
+                </div>
             </div>
 
             <a href="javascript:void(0)" onClick="nextComic()" class="comic-book__wrapper-right js-next"></a>
@@ -45,9 +47,8 @@
         </defs>
     </svg>
 </div>
-<script>// (function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()</script>
 
-<script src="/js/script.min.js?v=16"></script>
+<script src="/js/script.min.js?v=20"></script>
 
 </body>
 </html>

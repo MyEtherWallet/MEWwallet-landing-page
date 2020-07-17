@@ -488,13 +488,11 @@ return lottie;
  **/
 
 var comics = []
-
-var comic = 0
-
+var comic = -1
 var DELAY = 150
 
 $(window).load(function(){
-  loadComic(comic)
+  updateButtons()
   resizeComicWrap()
 });
 
@@ -541,22 +539,29 @@ function playComic() {
 }
 
 function nextComic() {
-  if(comic !== 10) {
+  if(comic == -1) {
+    $('.js-comic').fadeTo(DELAY, 0);
+
+    setTimeout(function(){
+      document.getElementById("js-comic").innerHTML = "";
+      comic += 1;
+      loadComic(comic);
+    }, DELAY);
+  } else if (comic !== 10) {
     $('.js-comic').fadeTo(DELAY, 0);
 
     setTimeout(function(){
       comics[comic].stop()
       comics[comic].destroy()
-  
+
       comic += 1
-  
       loadComic(comic)
     }, DELAY)
   }
 }
 
 function prevComic() {
-  if(comic !== 0) {
+  if(comic !== -1) {
     $('.js-comic').fadeTo(DELAY, 0);
 
     setTimeout(function(){
@@ -565,7 +570,16 @@ function prevComic() {
   
       comic -= 1
   
-      loadComic(comic)
+      if(comic == -1) {
+        $('.js-comic').fadeTo(DELAY, 1);
+
+        setTimeout(function(){
+          document.getElementById("js-comic").innerHTML = '<img class="comic-book__wrapper-cover" src="/pic/what-is-eth-cover@2x.png" />';
+          updateButtons();        
+        }, DELAY)
+      } else {
+        loadComic(comic)
+      }
     }, DELAY)
   }
 }
@@ -619,6 +633,7 @@ function resizeComicWrap() {
   var width = Math.floor(1080 / (1920 / height))
 
   if($(window).width() > 960) {
+    $(".js-comic").removeAttr("style");
 
     var styles = {
       width: width,
@@ -638,6 +653,8 @@ function resizeComicWrap() {
 
   } else if($(window).width() > 740) {
 
+    $(".js-menu").removeAttr("style");
+
     height = $(window).height() - 412
     width = Math.floor(1080 / (1920 / height))
 
@@ -650,7 +667,7 @@ function resizeComicWrap() {
       left: "50%",
     };
   
-    $(".js-comic-wrapper").css(styles);
+    $(".js-comic").removeAttr("style");
   
     $("#clipped-rect").attr('width' , width);
     $("#clipped-rect").attr('height' , height);
@@ -658,10 +675,27 @@ function resizeComicWrap() {
     $("#clipped-rect").attr('ry' , 20);
 
   } else {
+    var width1 = window.innerWidth;
+    var height1 = Math.floor(1920 / (1080 / width1));
+
+    if (height1 < window.innerHeight) {
+      height1 = window.innerHeight
+      width1 = Math.floor(1080 / (1920 / height1));
+    }
+    
+    var styles1 = {
+      width: width1,
+      height: height1,
+      display: 'block',
+      top: (window.innerHeight - height1) / 2,
+      left: (window.innerWidth - width1) / 2,
+    };
+
+    $(".js-comic").css(styles1);
 
     var styles = {
-      width: $(window).width(),
-      height: $(window).height(),
+      width: window.innerWidth,
+      height: window.innerHeight,
       marginLeft: 0,
       display: 'block',
       top: 0,
@@ -670,18 +704,22 @@ function resizeComicWrap() {
   
     $(".js-comic-wrapper").css(styles);
   
-    $("#clipped-rect").attr('width' , $(window).width());
-    $("#clipped-rect").attr('height' , $(window).height());
+    $("#clipped-rect").attr('width', window.innerWidth);
+    $("#clipped-rect").attr('height', window.innerHeight);
     $("#clipped-rect").attr('rx' , 0);
     $("#clipped-rect").attr('ry' , 0);
-
   }
 
   $(".js-menu").removeAttr("style");
+
+  $(".js-comic-body").css({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 }
 
 function updateButtons() {
-  if(comic == 0) {
+  if(comic == -1) {
     $(".js-prev").addClass('hide');
   } else {
     $(".js-prev").removeClass('hide');
