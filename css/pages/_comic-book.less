@@ -5,7 +5,8 @@
     min-width: 320px;
     background-color: #FAFAFA;
     overflow: hidden;
-  
+    height: 100vh;
+
     .container {
       max-width: 1152px;
       position: relative;
@@ -173,7 +174,7 @@
         overflow: hidden;
         z-index: 1;
         font-size: 0;
-        background-color: #000000;
+        background-color: #252525;
         
         &.clipped {
           clip-path: url(#clipped);
@@ -182,10 +183,10 @@
 
       &-preloader {
         position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-top: -32px;
-        margin-left: -32px;
+        right: 24px;
+        top: 24px;
+        width: 40px;
+        height: 40px;
       }
 
       &-cover {
@@ -193,6 +194,7 @@
         position: relative;
         left: -5px;
         top: -5px;
+        z-index: 1;
       }
 
       &-comic {
@@ -215,6 +217,12 @@
             left: 0; 
             top: 0;
           });
+
+          &:first-child {
+            .screen-mobile({
+              z-index: 1;
+            });
+          }
         }
 
       }
@@ -258,6 +266,11 @@
           &:after {
             .svg-svg--comic-arrow-left-g;
             .svg-svg--comic-arrow-left-g-dims;
+
+            .screen-mobile({
+              .svg-svg--comic-arrow-left;
+              .svg-svg--comic-arrow-left-dims;
+            });
           }
         }
 
@@ -312,6 +325,11 @@
           &:after {
             .svg-svg--comic-arrow-right-g;
             .svg-svg--comic-arrow-right-g-dims;
+
+            .screen-mobile({
+              .svg-svg--comic-arrow-right;
+              .svg-svg--comic-arrow-right-dims;
+            });
           }
         }
 
@@ -361,4 +379,15 @@
         });
       }
     }
+
+  &__animation {
+    &-text {
+      font-size: 47px;
+      line-height: 1.213em;
+      color: #000000;
+      text-align: center;
+      font-family: 'M PLUS Rounded 1c', sans-serif;
+      font-weight: 800;
+    }
+  }  
 }
