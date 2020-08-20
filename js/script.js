@@ -505,6 +505,7 @@ $(window).load(function(){
   if($("div").hasClass("js-comic-body")) {
     updateButtons()
     resizeComicWrap()
+    updateZoom()
   
     $.getJSON( "/what-is-ethereum/strings/en/index.json", function(data) {
       strings = data.result;
@@ -529,8 +530,11 @@ $(window).load(function(){
 });
 
 $(window).resize(function(){
-  resizeComicWrap()
-  generateButtons()
+  if($("div").hasClass("js-comic-body")) {
+    resizeComicWrap()
+    generateButtons()
+    updateZoom()
+  }
 });
 
 function loadComic() {
@@ -697,7 +701,7 @@ function getComicPatch(index) {
 }
 
 function resizeComicWrap() {
-  var height = $(window).height() - 80
+  var height = window.innerHeight - 80
   var width = Math.floor(1080 / (1920 / height))
 
   if($(window).width() > 960) {
@@ -723,7 +727,7 @@ function resizeComicWrap() {
 
     $(".js-menu").removeAttr("style");
 
-    height = $(window).height() - 412
+    height =window.innerHeight - 412
     width = Math.floor(1080 / (1920 / height))
 
     var styles = {
@@ -816,6 +820,39 @@ function generateButtons () {
       $('#BUBBLE_TEXT_2').removeAttr('clip-path').attr('transform', 'matrix(1,0,0,1,95,1451.875)');
       document.getElementById('BUBBLE_TEXT_2').innerHTML = appStore(0, 0) + googlePlay(443, 0);
     }
+  }
+}
+
+function updateZoom () {
+  var screenCssPixelRatio = (window.outerWidth - 8) / window.innerWidth;
+  if (screenCssPixelRatio >= .46 && screenCssPixelRatio <= .54) {
+    zoomLevel = "-4";
+  } else if (screenCssPixelRatio <= .64) {
+    zoomLevel = "-3";
+  } else if (screenCssPixelRatio <= .76) {
+    zoomLevel = "-2";
+  } else if (screenCssPixelRatio <= .92) {
+    zoomLevel = "-1";
+  } else if (screenCssPixelRatio <= 1.10) {
+    zoomLevel = "0";
+  } else if (screenCssPixelRatio <= 1.32) {
+    zoomLevel = "1";
+  } else if (screenCssPixelRatio <= 1.58) {
+    zoomLevel = "2";
+  } else if (screenCssPixelRatio <= 1.90) {
+    zoomLevel = "3";
+  } else if (screenCssPixelRatio <= 2.28) {
+    zoomLevel = "4";
+  } else if (screenCssPixelRatio <= 2.70) {
+    zoomLevel = "5";
+  } else {
+    zoomLevel = "unknown";
+  }
+
+  if(zoomLevel == "0" || zoomLevel == "1" || zoomLevel == "-1" || zoomLevel == "-2") {
+    $('.clipped').addClass('zoom')
+  } else {
+    $('.clipped').removeClass('zoom')
   }
 }
 

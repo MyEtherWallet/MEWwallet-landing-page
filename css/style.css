@@ -4003,6 +4003,7 @@ html {
   font-variation-ligatures: normal;
   font-feature-settings: 'calt', 'liga';
   min-width: 320px;
+  zoom: 1;
 }
 * {
   box-sizing: border-box;
@@ -6040,6 +6041,14 @@ html {
 .comic-book__wrapper-display.clipped {
   clip-path: url(#clipped);
   -webkit-clip-path: url(#clipped);
+}
+.comic-book__wrapper-display.clipped.zoom {
+  border-radius: 20px;
+}
+@media (max-width: 740px) {
+  .comic-book__wrapper-display.clipped.zoom {
+    border-radius: 0;
+  }
 }
 .comic-book__wrapper-preloader {
   position: absolute;
