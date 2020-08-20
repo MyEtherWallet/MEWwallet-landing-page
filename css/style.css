@@ -6039,6 +6039,7 @@ html {
 }
 .comic-book__wrapper-display.clipped {
   clip-path: url(#clipped);
+  -webkit-clip-path: url(#clipped);
 }
 .comic-book__wrapper-preloader {
   position: absolute;
