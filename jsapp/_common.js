@@ -14,55 +14,58 @@ var videoMobile = document.getElementById("player-m")
 var playButton = $('.js-play-video')
 
 $(window).load(function(){
+  if($("div").hasClass("own-funds")) {
+    playButton.click(function(){
+      play();
+    });
 
-  playButton.click(function(){
-    play();
-  });
+    bodymovin.loadAnimation({
+      container: document.getElementById('js-animate'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '/start.json'
+    });
 
-  bodymovin.loadAnimation({
-    container: document.getElementById('js-animate'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '/start.json'
-  });
+    ownFundsAnimate = bodymovin.loadAnimation({
+      container: document.getElementById('js-animate-own-funds'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: '/own-funds.json'
+    });
 
-  ownFundsAnimate = bodymovin.loadAnimation({
-    container: document.getElementById('js-animate-own-funds'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: false,
-    path: '/own-funds.json'
-  });
-
-  staySafeAnimate = bodymovin.loadAnimation({
-    container: document.getElementById('js-animate-stay-safe'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: false,
-    path: '/stay-safe.json'
-  });
+    staySafeAnimate = bodymovin.loadAnimation({
+      container: document.getElementById('js-animate-stay-safe'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: '/stay-safe.json'
+    });
+  }
 });
 
 $(document).scroll(function() {
-  if (comeOrigin("#js-animate-own-funds") && !ownFunds) {
-    ownFunds = true
+  if($("div").hasClass("own-funds")) {
+    if (comeOrigin("#js-animate-own-funds") && !ownFunds) {
+      ownFunds = true
 
-    ownFundsAnimate.play()
-  }
+      ownFundsAnimate.play()
+    }
 
-  if (comeOrigin("#js-animate-stay-safe") && !staySafe) {
-    staySafe = true
+    if (comeOrigin("#js-animate-stay-safe") && !staySafe) {
+      staySafe = true
 
-    staySafeAnimate.play()
-  }
+      staySafeAnimate.play()
+    }
 
-  if (come("#js-video") && !videoPlay) {
-    if($(window).width() > 740) play();
-  }
+    if (come("#js-video") && !videoPlay) {
+      if($(window).width() > 740) play();
+    }
 
-  if (!come("#js-video") && videoPlay) {
-    stop();
+    if (!come("#js-video") && videoPlay) {
+      stop();
+    }
   }
 });
 

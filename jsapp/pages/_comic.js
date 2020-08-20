@@ -17,28 +17,30 @@ function googlePlay (x, y) {
 } 
 
 $(window).load(function(){
-  updateButtons()
-  resizeComicWrap()
-
-  $.getJSON( "/what-is-ethereum/strings/en/index.json", function(data) {
-    strings = data.result;
-  });
-
-  lottie.loadAnimation({
-    container: document.getElementById('js-preloader'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '/images/loader.json'
-  });
-
-  comics[0] = lottie.loadAnimation({
-    container: document.getElementById('js-comic'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: getComicPatch(0)
-  });
+  if($("div").hasClass("js-comic-body")) {
+    updateButtons()
+    resizeComicWrap()
+  
+    $.getJSON( "/what-is-ethereum/strings/en/index.json", function(data) {
+      strings = data.result;
+    });
+  
+    lottie.loadAnimation({
+      container: document.getElementById('js-preloader'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '/images/loader.json'
+    });
+  
+    comics[0] = lottie.loadAnimation({
+      container: document.getElementById('js-comic'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: getComicPatch(0)
+    });
+  }
 });
 
 $(window).resize(function(){
@@ -173,37 +175,37 @@ function getComicPatch(index) {
 
   switch (index) {
     case 0:
-      path = "/what-is-ethereum/_MEW_S1.json";
+      path = "./mew-s1.json";
       break;
     case 1:
-      path = "/what-is-ethereum/_MEW_S2.json";
+      path = "./mew-s2.json";
       break;
     case 2:
-      path = "/what-is-ethereum/_MEW_S3.json";
+      path = "./mew-s3.json";
       break;
     case 3:
-      path = "/what-is-ethereum/_MEW_S4.json";
+      path = "./mew-s4.json";
       break;
     case 4:
-      path = "/what-is-ethereum/_MEW_S5.json";
+      path = "./mew-s5.json";
       break;
     case 5:
-      path = "/what-is-ethereum/_MEW_S6.json";
+      path = "./mew-s6.json";
       break;
     case 6:
-      path = "/what-is-ethereum/_MEW_S7.json";
+      path = "./mew-s7.json";
       break;
     case 7:
-      path = "/what-is-ethereum/_MEW_S8.json";
+      path = "./mew-s8.json";
       break;
     case 8:
-      path = "/what-is-ethereum/_MEW_S9.json";
+      path = "./mew-s9.json";
       break;
     case 9:
-      path = "/what-is-ethereum/_MEW_S10-1.json";
+      path = "./mew-s10.json";
       break;
     default:
-      path = "/what-is-ethereum/_MEW_S1.json";
+      path = "./mew-s1.json";
   }
 
   return path  
