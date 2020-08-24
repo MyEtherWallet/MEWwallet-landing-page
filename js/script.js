@@ -901,6 +901,36 @@ $(window).load(function(){
       path: '/stay-safe.json'
     });
   }
+
+  $('.js-toggle-menu').click(function () {
+    if($('.js-menu').hasClass('open')) {
+      $('.js-toggle-menu').removeClass('open-final');
+      $('.js-menu').removeClass('open-final');
+
+      setTimeout(function(){
+        $('.js-toggle-menu').removeClass('open');
+      }, 100)
+
+      setTimeout(function(){
+        $('.js-menu').removeClass('open');
+        $('.js-logo').removeClass('open');
+      }, 300)
+
+    } else {
+      $('.js-logo').addClass('open');
+      $('.js-toggle-menu').addClass('open');
+      $('.js-menu').addClass('open');
+
+      setTimeout(function(){
+        $('.js-menu').addClass('open-final');
+      }, 50)
+
+      setTimeout(function(){
+        $('.js-toggle-menu').addClass('open-final');
+      }, 100)
+    }
+
+  });
 });
 
 $(document).scroll(function() {

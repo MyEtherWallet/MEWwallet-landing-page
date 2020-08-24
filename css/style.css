@@ -4066,6 +4066,7 @@ html {
 .header {
   height: 120px;
   position: relative;
+  background-color: #ffffff;
 }
 .header__logo {
   background: url("svg/sprite.css-fa772754.svg") no-repeat;
@@ -4080,6 +4081,13 @@ html {
   .header__logo {
     top: 25px;
     left: -6px;
+  }
+}
+@media (max-width: 740px) {
+  .header__logo.open {
+    z-index: 2;
+    position: fixed;
+    left: 15px;
   }
 }
 .header__menu {
@@ -4099,11 +4107,6 @@ html {
   margin-right: 20px;
   text-decoration: none;
 }
-@media (max-width: 740px) {
-  .header__menu-link {
-    display: none;
-  }
-}
 .header__menu-link.active {
   border-bottom: 2px solid #202124;
 }
@@ -4118,8 +4121,145 @@ html {
   top: 48px;
   margin: 0;
 }
+@media (max-width: 740px) {
+  .header__menu-link.right {
+    display: none;
+  }
+}
 .header__menu-link.right:hover {
   opacity: 0.8;
+}
+.header__mobile-menu {
+  visibility: hidden;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 20px 300px 0px rgba(0, 0, 0, 0.3);
+  width: calc(100% - 16px);
+  position: fixed;
+  top: 18px;
+  left: 8px;
+  z-index: 1;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition: opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.header__mobile-menu-wrap {
+  max-height: 86px;
+  transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.header__mobile-menu .header__mobile-menu-links {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.header__mobile-menu.open .header__mobile-menu-links {
+  opacity: 1;
+}
+@media (max-width: 740px) {
+  .header__mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (max-width: 740px) {
+  .header__mobile-menu.open-final .header__mobile-menu-wrap {
+    max-height: 500px;
+  }
+}
+.header__mobile-menu-logo {
+  background: url("svg/sprite.css-fa772754.svg") no-repeat;
+  background-position: 65.39074960127591% 67.96116504854369%;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+.header__mobile-menu-links {
+  padding-top: 100px;
+  text-align: center;
+}
+.header__mobile-menu-links-item {
+  display: inline-block;
+  text-align: center;
+  margin-right: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #202124;
+  text-decoration: none;
+}
+.header__mobile-menu-links-item.active {
+  border-bottom: 2px solid #202124;
+}
+.header__mobile-menu-links-item:hover {
+  border-bottom: 2px solid #202124;
+}
+.header__mobile-menu-links-item:last-child {
+  margin-bottom: 28px;
+}
+.header__mobile-menu-link {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  right: 20px;
+  top: 30px;
+  display: none;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+@media (max-width: 740px) {
+  .header__mobile-menu-link {
+    display: block;
+  }
+}
+.header__mobile-menu-link span {
+  border-radius: 2.5px;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  background-color: #ffffff;
+  transform: translateY(0) rotate(0);
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transition: 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.header__mobile-menu-link span:last-child {
+  top: 34px;
+}
+.header__mobile-menu-link.open span {
+  transform: translateY(5px);
+  -webkit-transition: 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.header__mobile-menu-link.open span:last-child {
+  transform: translateY(-5px);
+}
+.header__mobile-menu-link.open-final span {
+  transform: translateY(5px) rotate(45deg);
+  -webkit-transition: 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -moz-transition: 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.header__mobile-menu-link.open-final span:last-child {
+  transform: translateY(-5px) rotate(-45deg);
 }
 .footer {
   height: 1200px;
@@ -4738,8 +4878,8 @@ html {
   }
 }
 .fadeIn {
-  -webkit-animation: fadeIn .5s ease both;
-  animation: fadeIn 0.5s ease both;
+  -webkit-animation: fadeIn 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  animation: fadeIn 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 @-webkit-keyframes fadeOut {
   from {
@@ -4782,8 +4922,8 @@ html {
   }
 }
 .fadeOutDown {
-  -webkit-animation: fadeOutDown .5s ease both;
-  animation: fadeOutDown 0.5s ease both;
+  -webkit-animation: fadeOutDown .3s ease both;
+  animation: fadeOutDown 0.3s ease both;
 }
 /****
  * Плагины
@@ -4796,6 +4936,7 @@ html {
  ****/
 .start {
   height: 631px;
+  background-color: #ffffff;
 }
 @media (max-width: 960px) {
   .start {
@@ -5121,6 +5262,7 @@ html {
 }
 .buy-crypto {
   min-height: 600px;
+  background-color: #ffffff;
 }
 @media (max-width: 960px) {
   .buy-crypto {
@@ -5398,6 +5540,7 @@ html {
 .stay-safe {
   min-height: 600px;
   padding-top: 86px;
+  background-color: #ffffff;
 }
 @media (max-width: 740px) {
   .stay-safe {
@@ -5586,6 +5729,7 @@ html {
   min-height: 680px;
   padding-top: 82px;
   overflow: hidden;
+  background-color: #ffffff;
 }
 @media (max-width: 960px) {
   .multiple-accounts {
@@ -5596,6 +5740,7 @@ html {
   .multiple-accounts {
     min-height: auto;
     overflow: visible;
+    padding-bottom: 93px;
   }
 }
 .multiple-accounts__title {
@@ -5674,7 +5819,6 @@ html {
 }
 @media (max-width: 740px) {
   .web {
-    margin-top: 93px;
     padding-top: 49px;
     padding-bottom: 111px;
     margin-bottom: 0;
