@@ -4085,7 +4085,7 @@ html {
 }
 @media (max-width: 740px) {
   .header__logo.open {
-    z-index: 2;
+    z-index: 102;
     position: fixed;
     left: 15px;
   }
@@ -4138,7 +4138,7 @@ html {
   position: fixed;
   top: 18px;
   left: 8px;
-  z-index: 1;
+  z-index: 101;
   opacity: 0;
   overflow: hidden;
   transition: opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -4213,7 +4213,7 @@ html {
   right: 20px;
   top: 30px;
   display: none;
-  z-index: 2;
+  z-index: 102;
   mix-blend-mode: difference;
 }
 @media (max-width: 740px) {
