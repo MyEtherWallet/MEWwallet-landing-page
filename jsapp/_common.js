@@ -13,6 +13,20 @@ var videoMobile = document.getElementById("player-m")
 
 var playButton = $('.js-play-video')
 
+$(document).ready(function()  {
+  $.ajax({
+    url: "https://partners.mewapi.io/ip-info",
+    async: false, 
+    dataType: 'json',
+    crossDomain: true,
+    success: function (json) {
+      if(json.country == "GB") {
+        window.location.replace("https://www.myetherwallet.com");
+      }
+    }
+  });
+});
+
 $(window).load(function(){
   if($("div").hasClass("own-funds")) {
     playButton.click(function(){
